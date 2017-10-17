@@ -1,0 +1,37 @@
+public class Test{
+	public static void main(String args[]){
+		String str1="zhang hao ran ";
+		String str2="ZHANGHAORAN";
+		char s=str2.charAt(6); 
+		char [] st=str1.toCharArray();
+		System.out.println(s);						
+		System.out.print(st);								//Become Char Arrays
+		System.out.println("  ");								
+		System.out.println(str1.replaceAll(" ","NB"));		//Replace Elem to New Elem In str1
+		System.out.println(str1.replace(" ","NB"));			//Replace Elem to New Elem In str1
+		/*	(1)replace的参数是char和CharSequence，即可以支持字符的替换，也支持字符串的替换(CharSequence即字符串序列的意思,说白了也就是字符串)；
+			(2)replaceAll的参数是regex，即基于正则表达式的替换，比如，可以通过replaceAll("\\d", "*")把一个字符串所有的数字字符都换成星号;*/
+		System.out.println(str1.equals(str2));				// Case-sensitive Judgment
+		System.out.println(str1.equalsIgnoreCase(str2)); 	// No Case-sensitive Judgment
+		System.out.println(str1.compareTo(str2));			//Compare str1 With str2 					//forget...   important 
+		System.out.println(str1.contains(str2));			//Find Specific String   					//forget...   important 
+		System.out.println(str1.indexOf("h"));				//From the Find Specific String				
+		System.out.println(str1.indexOf("h",6)); 			//From 6 Find Specific String
+		System.out.println(str1.lastIndexOf("h"));			//From Back To Find Specific String	
+		System.out.println(str1.startsWith("h"));			//h Whether Is Beginning
+		System.out.println(str1.startsWith("h",5));			//From 5 Judge h Whether Is Beginning
+		System.out.println(str1.endsWith("h"));				//Judge h Whether Is Ending
+		System.out.println(str1.isEmpty());					//Judge str1 Whether Is Empty
+		System.out.println(str1.length());		
+		System.out.println(str1.trim());					//Trim String
+		System.out.println(str1.toLowerCase());				//Turn The String Lowercase
+		System.out.println(str1.toUpperCase());				//Turn The String Uppercase
+		System.out.println(str1.concat(str2));				//Connect str1&str2
+		System.out.println(str1.intern());					//When Using Construction Method
+	}
+	public static void print(char temp[]){
+		for(int i=0;i<temp.length;i++){
+			System.out.println(temp[i]);
+		}
+	}
+}
